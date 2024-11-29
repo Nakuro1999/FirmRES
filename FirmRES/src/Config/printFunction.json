@@ -1,0 +1,28 @@
+{
+  "printFunc": [
+    {
+      "Name": "sprintf",
+      "StringIndex" : "2"
+    },
+    {
+      "Name": "printf",
+      "StringIndex": "1"
+    },
+    {
+      "Name": "fprintf",
+      "StringIndex": "2"
+    },
+    {
+      "Name": "snprintf",
+      "StringIndex": "3"
+    },
+    {
+      "Name": "asprintf",
+      "StringIndex": "2"
+    },
+    {
+      "Name": "dprintf",
+      "StringIndex": "2"
+    }
+  ]
+}
