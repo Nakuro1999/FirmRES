@@ -1,9 +1,9 @@
 # FirmRES
 A new solution that automatically reconstructs device-cloud messages.
 
-# Core Concepts and Preliminary Implementation of Firmres
+# Core Concepts and Preliminary Implementation of FirmRES
 
-This document outlines the core concepts and preliminary implementation of firmres (due to additional considerations, we are unable to open-source the final version), which mainly includes the conceptual implementation of cloud program identification and message reconstruction. We hope that by sharing our basic framework and core algorithms, we can provide some ideas and inspiration.
+This document outlines the core concepts and preliminary implementation of FirmRES (due to additional considerations, we are unable to open-source the final version), which mainly includes the conceptual implementation of cloud program identification and message reconstruction. We hope that by sharing our basic framework and core algorithms, we can provide some ideas and inspiration.
 
 ## Runtime Requirements:
 - Ghidra 11.1.2 or higher
