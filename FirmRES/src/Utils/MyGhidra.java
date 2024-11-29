@@ -1302,7 +1302,7 @@ public abstract class MyGhidra extends GhidraScript {
     public String embedInformation(PcodeOp pcode, String embedV, Varnode v) throws Exception {
         String embedPcode = "";
         if(pcode.getOutput() != null){
-            if(v!=null&& embedV!=null && pcode.getOutput().equals(v)){
+            if(v!=null&& embedV!="" && pcode.getOutput().equals(v)){
                 embedPcode = embedV;
             }
             else {
@@ -1312,14 +1312,14 @@ public abstract class MyGhidra extends GhidraScript {
         embedPcode = embedPcode + getPcodeOp(pcode) + ": ";
         int count = pcode.getNumInputs();
         for(int i = 0; i <count-1; i++) {
-            if(v!=null && embedV!=null && pcode.getInput(i).equals(v)) {
+            if(v!=null && embedV!="" && pcode.getInput(i).equals(v)) {
                 embedPcode = embedPcode + embedV;
             }
             else {
                 embedPcode = embedPcode + embedVarnodeInformation(pcode.getInput(i)) + ",";
             }
         }
-        if(v!=null && embedV!=null && pcode.getInput(count-1).equals(v)){
+        if(v!=null && embedV!="" && pcode.getInput(count-1).equals(v)){
             embedPcode = embedPcode + embedV;
         }
         else {
