@@ -404,7 +404,7 @@ public class TreeProcess extends MyGhidra {
                         Integer ParamIdex = treeEntry.getKey();
                         MFTree tree = treeEntry.getValue();
                         //对树进行简化，仅保留有用的叶子节点和分支节点
-                        MFTree simplifiedTree = getSimplifiedTree(tree);
+                        MFTree simplifiedTree = updateSimplifiedTree(tree);
                         //对树进行倒转
                         invertTree(simplifiedTree.root);
                         ResParamIndexTree.put(ParamIdex,simplifiedTree);
@@ -475,7 +475,7 @@ public class TreeProcess extends MyGhidra {
      * 对树进行持续的更新简化，直至树的结构最简不再变化即停止简化更新
      * @param originalTree
      * @return
-
+     */
     public MFTree updateSimplifiedTree(MFTree originalTree) throws Exception {
         MFTree newTree = getSimplifiedTree(originalTree);
         do{
@@ -483,7 +483,7 @@ public class TreeProcess extends MyGhidra {
             newTree = getSimplifiedTree(originalTree);
         }while(newTree.members.size()!=originalTree.members.size());
         return newTree;
-    }*/
+    }
 
     /**
      * 在子树内进行消息树的重构
